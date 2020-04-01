@@ -15,7 +15,7 @@ def words_five_letters_long(text)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-     if text.match(/\A(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}\z/)  == nil
+     if text.match(/^[A-Z].+\.$/)  == nil
         false
       else
         true
@@ -23,7 +23,7 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
-  if phone.match(/\d[0-9]{10}/) == nil
+  if phone.match(/(\d+)-(\d+)-(\d+)/) == nil
      false
    else
      true
